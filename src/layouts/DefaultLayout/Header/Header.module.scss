@@ -1,0 +1,20 @@
+.wrapper {
+  height: var(--header-height);
+  width: calc(100% - var(--sidebar-width));
+  min-width: 660px;
+  padding: var(--default-padding);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+}
