@@ -9,9 +9,7 @@ import {
   faArrowRightLong,
   faArrowUpFromBracket,
   faGear,
-  faMagnifyingGlass,
   faShirt,
-  faX,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGem } from "@fortawesome/free-regular-svg-icons";
 import Tippy from "@tippyjs/react";
@@ -19,6 +17,7 @@ import "tippy.js/dist/tippy.css";
 
 //components
 import Button from "~/components/Button";
+import Search from "../Search";
 
 const cx = classNames.bind(style);
 
@@ -32,19 +31,10 @@ function Header() {
       <div className={cx("left")}>
         <Button iconOnly={<FontAwesomeIcon icon={faArrowLeftLong} />}></Button>
         <Button iconOnly={<FontAwesomeIcon icon={faArrowRightLong} />}></Button>
-        <div className={cx("search")}>
-          <div className={cx("search-btn")}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </div>
 
-          <input
-            type="text"
-            placeholder="Nhập tên bài hát, nghệ sĩ hoăc MV..."
-          />
-          <div className={cx("close-btn")}>
-            <FontAwesomeIcon icon={faX} />
-          </div>
-        </div>
+        {/* search */}
+        <Search />
+        {/* END - search */}
       </div>
       <div className={cx("right")}>
         <Tippy content="Chủ đề">

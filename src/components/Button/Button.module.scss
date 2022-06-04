@@ -2,7 +2,7 @@
   background-color: transparent;
 
   + .wrapper {
-    margin-left: 20px;
+    margin-left: 25px;
   }
 }
 
@@ -11,7 +11,7 @@
 }
 
 .iconOnly {
-  color: var(--setting-icon-color);
+  color: var(--text-primary-color);
 
   &:hover {
     cursor: pointer;
@@ -27,7 +27,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--hover-color);
+  background-color: var(--alpha-color);
 
   .icon {
     color: var(--setting-icon-color);
