@@ -8,22 +8,97 @@ import {
   faArrowLeftLong,
   faArrowRightLong,
   faArrowUpFromBracket,
+  faBan,
+  faChevronRight,
+  faCircleExclamation,
+  faCirclePlay,
+  faFileContract,
+  faFontAwesome,
+  faFontAwesomeFlag,
   faGear,
+  faMusic,
+  faPhone,
+  faRectangleAd,
+  faShieldHeart,
   faShirt,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGem } from "@fortawesome/free-regular-svg-icons";
+
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 //components
 import Button from "~/components/Button";
 import Search from "../Search";
+import Menu from "~/components/Popper/Menu";
 
 const cx = classNames.bind(style);
 
 // setTimeout(()=>{
 //   debugger
 // },2000)
+
+const MENU_ITEMS = [
+  {
+    leftIcon: <FontAwesomeIcon icon={faBan} />,
+    title: "Danh sách chặn",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faMusic} />,
+    title: "Chất lượng nhạc",
+    rightIcon: <FontAwesomeIcon icon={faChevronRight} />,
+    // data: [
+    //   {
+    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
+    //     title: "Chất lượng nhạc",
+    //   },
+    //   {
+    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
+    //     title: "Chất lượng nhạc",
+    //   },
+    // ],
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faCirclePlay} />,
+    title: "Giao diện",
+    rightIcon: <FontAwesomeIcon icon={faChevronRight} />,
+    separate: true,
+    // data: [
+    //   {
+    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
+    //     title: "Chất lượng nhạc",
+    //   },
+    //   {
+    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
+    //     title: "Chất lượng nhạc",
+    //   },
+    // ],
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faCircleExclamation} />,
+    title: "Giới thiệu",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faFontAwesome} />,
+    title: "Góp ý",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faPhone} />,
+    title: "Liên hệ",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faRectangleAd} />,
+    title: "Quảng cáo",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faFileContract} />,
+    title: "Thỏa thuận sử dụng",
+  },
+  {
+    leftIcon: <FontAwesomeIcon icon={faShieldHeart} />,
+    title: "Chính sách bảo mật",
+  },
+];
 
 function Header() {
   return (
@@ -53,11 +128,16 @@ function Header() {
             <FontAwesomeIcon icon={faArrowUpFromBracket} />
           </button>
         </Tippy>
-        <Tippy content="Cài đặt">
+
+        {/* setting icon */}
+
+        <Menu items={MENU_ITEMS}>
           <button className={cx("action-btn")}>
             <FontAwesomeIcon icon={faGear} />
           </button>
-        </Tippy>
+        </Menu>
+
+        {/* END setting icon */}
 
         <img
           className={cx("avata")}

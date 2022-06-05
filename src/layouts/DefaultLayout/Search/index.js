@@ -35,11 +35,10 @@ function Search() {
     <div>
       <HeadlessTippy
         visible={showResult}
-        trigger="click"
+        // trigger={searchValue || "click"}
         onClickOutside={() => setShowResult(false)}
         interactive
         placement="bottom"
-        duration={(1000, 0)}
         render={(attrs) => (
           <div className={cx("search-result")} tabIndex="-1" {...attrs}>
             {/* suggesItem*/}

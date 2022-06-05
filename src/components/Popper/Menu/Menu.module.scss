@@ -1,0 +1,32 @@
+.menu-list {
+  width: 240px;
+  .menu-item {
+    margin-left: 0;
+  }
+}
+
+.menu-popper {
+}
+.menu-body {
+  overflow-y: auto;
+}
+
+.menu-item {
+  width: 100%;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  color: var(--text-secondary-color);
+  display: flex;
+  align-items: center;
+
+  &.separate {
+    border-bottom: 1px solid var(--alpha-color);
+    margin-bottom: 2px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--white);
+    background-color: var(--alpha-color);
+  }
+}
