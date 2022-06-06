@@ -7,6 +7,7 @@
   height: 40px;
   border-radius: 20px;
   background-color: var(--alpha-color);
+  color: var(--search-text);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,12 +59,17 @@
 
 input {
   --search-text: #eee;
-
+  color: var(--search-text);
   flex: 1;
   font-size: 1.5rem;
   line-height: 34px;
   background-color: transparent;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--search-text);
+  opacity: 1; /* Firefox */
 }
 
 .close-btn {

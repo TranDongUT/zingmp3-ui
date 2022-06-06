@@ -1,18 +1,20 @@
 .wrapper {
-  --header-height: 70px;
-  --default-padding: 59px;
-
   height: var(--header-height);
   width: calc(100% - var(--sidebar-width));
   min-width: 660px;
   padding: 0 var(--default-padding);
-  background-color: var(--primary-color);
+  // background-color: var(--primary-color);
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
   right: 0;
+}
+
+.scroll {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .left {

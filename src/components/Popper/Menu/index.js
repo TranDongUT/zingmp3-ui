@@ -7,7 +7,7 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 //components
-import MenuItems from "./MenuItem";
+import MenuItem from "./MenuItem";
 import { WrapperPopper } from "~/components/Popper";
 
 const cx = classNames.bind(style);
@@ -15,7 +15,7 @@ const cx = classNames.bind(style);
 function Menu({ items = [], children }) {
   const renderItems = () => {
     return items.map((item, index) => {
-      return <MenuItems key={index} data={item} />;
+      return <MenuItem key={index} data={item} />;
     });
   };
 

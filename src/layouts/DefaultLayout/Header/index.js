@@ -14,7 +14,6 @@ import {
   faCirclePlay,
   faFileContract,
   faFontAwesome,
-  faFontAwesomeFlag,
   faGear,
   faMusic,
   faPhone,
@@ -31,6 +30,8 @@ import "tippy.js/dist/tippy.css";
 import Button from "~/components/Button";
 import Search from "../Search";
 import Menu from "~/components/Popper/Menu";
+import { useEffect, useState } from "react";
+import Modal from "~/components/Modal";
 
 const cx = classNames.bind(style);
 
@@ -47,32 +48,32 @@ const MENU_ITEMS = [
     leftIcon: <FontAwesomeIcon icon={faMusic} />,
     title: "Chất lượng nhạc",
     rightIcon: <FontAwesomeIcon icon={faChevronRight} />,
-    // data: [
-    //   {
-    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
-    //     title: "Chất lượng nhạc",
-    //   },
-    //   {
-    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
-    //     title: "Chất lượng nhạc",
-    //   },
-    // ],
+    data: [
+      {
+        leftIcon: <FontAwesomeIcon icon={faMusic} />,
+        title: "SQ . 128",
+      },
+      {
+        leftIcon: <FontAwesomeIcon icon={faMusic} />,
+        title: "HQ . 320",
+      },
+    ],
   },
   {
     leftIcon: <FontAwesomeIcon icon={faCirclePlay} />,
     title: "Giao diện",
     rightIcon: <FontAwesomeIcon icon={faChevronRight} />,
     separate: true,
-    // data: [
-    //   {
-    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
-    //     title: "Chất lượng nhạc",
-    //   },
-    //   {
-    //     leftIcon: <FontAwesomeIcon icon={faMusic} />,
-    //     title: "Chất lượng nhạc",
-    //   },
-    // ],
+    data: [
+      {
+        leftIcon: <FontAwesomeIcon icon={faCirclePlay} />,
+        title: "Luôn phát nhạc toàn màn hình",
+      },
+      {
+        leftIcon: <FontAwesomeIcon icon={faCirclePlay} />,
+        title: "Hiệu ứng",
+      },
+    ],
   },
   {
     leftIcon: <FontAwesomeIcon icon={faCircleExclamation} />,
@@ -101,8 +102,25 @@ const MENU_ITEMS = [
 ];
 
 function Header() {
+  const [showModal, setShowModal] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(!showModal);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={cx("wrapper")}>
+    <div className={cx("wrapper", { scroll: scroll })}>
       <div className={cx("left")}>
         <Button iconOnly={<FontAwesomeIcon icon={faArrowLeftLong} />}></Button>
         <Button iconOnly={<FontAwesomeIcon icon={faArrowRightLong} />}></Button>
@@ -113,7 +131,12 @@ function Header() {
       </div>
       <div className={cx("right")}>
         <Tippy content="Chủ đề">
-          <button className={cx("action-btn")}>
+          <button
+            className={cx("action-btn")}
+            onClick={() => {
+              setShowModal(!showModal);
+            }}
+          >
             <FontAwesomeIcon icon={faShirt} />
           </button>
         </Tippy>
@@ -145,6 +168,10 @@ function Header() {
           alt="avata"
         />
       </div>
+
+      {/* Modal */}
+      {showModal && <Modal title={"Giao diện"} onShow={handleShowModal} />}
+      {/* END Modal */}
     </div>
   );
 }
