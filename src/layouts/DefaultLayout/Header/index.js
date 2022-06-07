@@ -111,6 +111,8 @@ function Header() {
 
   // handle show header
   useEffect(() => {
+    const rec = document.querySelector(".content");
+    console.log(rec);
     const handleScroll = () => {
       setScroll(window.scrollY > 10);
     };

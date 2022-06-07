@@ -58,8 +58,7 @@
 }
 
 input {
-  --search-text: #eee;
-  color: var(--search-text);
+  color: var(--text-secondary-color);
   flex: 1;
   font-size: 1.5rem;
   line-height: 34px;
@@ -68,7 +67,7 @@ input {
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: var(--search-text);
+  color: var(--text-secondary-color);
   opacity: 1; /* Firefox */
 }
 

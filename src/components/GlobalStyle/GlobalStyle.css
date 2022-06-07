@@ -5,10 +5,12 @@
   --text-primary-color: #fff;
   --text-secondary-color: #ffffff80;
   --primary-color: #282828;
+  /* --text-item-hover:  */
   --secondary-color: #1e1e1e;
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
 
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
   /* size */
   --header-height: 70px;
@@ -53,12 +55,16 @@ input {
 /* sroll */
 
 body ::-webkit-scrollbar {
-  width: 9px;
-  overflow: hidden;
+  width: 6px;
 }
+
 body ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  -webkit-box-shadow: inset 0 0 20px var(--white);
+  -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
+}
+body ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset #fff;
+  border-radius: 4px;
 }
 
 /* themes */
@@ -66,11 +72,12 @@ body[data-theme="Dark"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-  --primary-color: #1e1e1e;
+  --primary-color: #1e1--text-item-hover: e1e;
   --secondary-color: #292929;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 5%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
   /* size */
   --header-height: 70px;
@@ -82,12 +89,13 @@ body[data-theme="Purple"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-
+/* --text-item-hover:  */
   --primary-color: #170f23;
   --secondary-color: #432275;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
   /* size */
   --header-height: 70px;
@@ -99,12 +107,13 @@ body[data-theme="Blue Light"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-
+/* --text-item-hover:  */
   --primary-color: #274a78;
   --secondary-color: #1d375a;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
   /* size */
   --header-height: 70px;
@@ -116,10 +125,13 @@ body[data-theme="Pink"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
+/* --text-item-hover:  */
   --primary-color: #800064;
   --secondary-color: #a22687;
+
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
   /* size */
   --header-height: 70px;
@@ -131,10 +143,13 @@ body[data-theme="Green"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
+/* --text-item-hover:  */
   --primary-color: #124534;
   --secondary-color: #126e54;
+
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
   /* size */
   --header-height: 70px;
@@ -146,12 +161,13 @@ body[data-theme="XoneFM"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-
+/* --text-item-hover:  */
   --primary-color: #1e1e1e;
   --secondary-color: #282828;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
   --bg-img: url("../../assets/images/background/xone-bg.jpg");
@@ -165,12 +181,13 @@ body[data-theme="Zing"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-
+/* --text-item-hover:  */
   --primary-color: #37075d;
   --secondary-color: #6a39af;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
   --bg-img: url("../../assets/images/background/zma.svg");
@@ -185,12 +202,13 @@ body[data-theme="Eiffel"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-
-  --primary-color: #37075d;
-  --secondary-color: #6a39af;
+  /* --text-item-hover:  */
+  --primary-color: #1e1e1e;
+  --secondary-color: #282828;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
   --bg-img: url("../../assets/images/background/eiffel.jpg");
@@ -203,14 +221,16 @@ body[data-theme="Eiffel"] {
 
 body[data-theme="Lisa"] {
   /* color */
-  --text-primary-color: #d8d8d8;
+  --text-primary-color: #32323d;
   --text-secondary-color: #696969;
+  --text-item-hover: #ea7aa0;
 
   --primary-color: #f9dbdb;
   --secondary-color: #fff8f8;
 
-  --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --bg-hover-color: rgba(0, 0, 0, 0.05);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
   --bg-img: url("../../assets/images/background/lisa.jpg");
@@ -223,14 +243,16 @@ body[data-theme="Lisa"] {
 
 body[data-theme="Jennie"] {
   /* color */
-  --text-primary-color: #d8d8d8;
+  --text-primary-color: #32323d;
   --text-secondary-color: #696969;
+  --text-item-hover: #2a5e6b;
 
-  --primary-color: #f9dbdb;
-  --secondary-color: #fff8f8;
+  --primary-color: #e5e3df;
+  --secondary-color: #e2e7f5;
 
-  --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --bg-hover-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
   --bg-img: url("../../assets/images/background/jennie.jpg");
@@ -243,14 +265,16 @@ body[data-theme="Jennie"] {
 
 body[data-theme="Jisoo"] {
   /* color */
-  --text-primary-color: #d8d8d8;
-  --text-secondary-color: #696969;
+  --text-primary-color: #32323d;
+  --text-secondary-color: rgba(0,0,0,0.6);
+  --text-item-hover: #6b3483;
 
-  --primary-color: #f9dbdb;
-  --secondary-color: #fff8f8;
+  --primary-color: #fff;
+  --secondary-color: #fff;
 
-  --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --bg-hover-color: rgb(0 0 0 / 5%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
   --bg-img: url("../../assets/images/background/jisoo.jpg");
@@ -263,14 +287,16 @@ body[data-theme="Jisoo"] {
 
 body[data-theme="Rose"] {
   /* color */
-  --text-primary-color: #d8d8d8;
-  --text-secondary-color: #696969;
+  --text-primary-color: #fff;
+  --text-secondary-color: rgb(255 255 255 / 50%);
+  --text-item-hover: #fff;
 
-  --primary-color: #f9dbdb;
-  --secondary-color: #fff8f8;
+  --primary-color: #101f3f;
+  --secondary-color: #192f60;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgb(255 255 255 / 10%);
+  --alpha-color: rgba(0,0,0,0.05);
+  --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
   --bg-img: url("../../assets/images/background/rose.jpg");
