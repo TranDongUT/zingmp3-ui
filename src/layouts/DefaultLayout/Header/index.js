@@ -109,6 +109,7 @@ function Header() {
     setShowModal(!showModal);
   };
 
+  // handle show header
   useEffect(() => {
     const handleScroll = () => {
       setScroll(window.scrollY > 10);

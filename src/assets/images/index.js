@@ -10,7 +10,7 @@ const images = {
     xoneThumbn: require("~/assets/images/theme-Item/xone-thumbn.jpg"),
     zma: require("~/assets/images/theme-Item/zma.jpg"),
     lisa: require("~/assets/images/theme-Item/lisa.jpg"),
-    jennie: require("~/assets/images/theme-Item/green.jpg"),
+    jennie: require("~/assets/images/theme-Item/jennie.jpg"),
     jisoo: require("~/assets/images/theme-Item/jisoo.jpg"),
     rose: require("~/assets/images/theme-Item/rose.jpg"),
   },

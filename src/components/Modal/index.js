@@ -9,30 +9,6 @@ import { useEffect, useState } from "react";
 
 //component
 import Themes from "./Theme/Themes";
-import images from "~/assets/images";
-
-const COLOR_THEMES = [
-  {
-    name: "Dark",
-    path: images.themeItem.dark,
-  },
-  {
-    name: "Purple",
-    path: images.themeItem.purple,
-  },
-  {
-    name: "Blue Light",
-    path: images.themeItem.blueLight,
-  },
-  {
-    name: "Green",
-    path: images.themeItem.green,
-  },
-  {
-    name: "Pink",
-    path: images.themeItem.pink,
-  },
-];
 
 const cx = classNames.bind(style);
 
@@ -47,7 +23,9 @@ function Modal({ title, onShow }) {
           </button>
         </div>
         <div className={cx("content")}>
-          <Themes items={COLOR_THEMES} />
+          {/* Themes */}
+          <Themes />
+          {/* END Themes */}
         </div>
       </div>
     </div>

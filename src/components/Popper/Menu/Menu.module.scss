@@ -20,13 +20,13 @@
   align-items: center;
 
   &.separate {
-    border-bottom: 1px solid var(--alpha-color);
+    border-bottom: 1px solid var(--bg-hover-color);
     margin-bottom: 2px;
   }
 
   &:hover {
     cursor: pointer;
-    color: var(--white);
-    background-color: var(--alpha-color);
+    color: var(--text-primary-color);
+    background-color: var(--bg-hover-color);
   }
 }

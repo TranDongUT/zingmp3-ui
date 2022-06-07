@@ -1,28 +1,33 @@
+//css
 import style from "./Theme.module.scss";
 import classNames from "classnames/bind";
-
-import { useEffect, useState } from "react";
+//package
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(style);
 
-function ThemeItem({ data }) {
-  const [theme, setTheme] = useState(() => {
-    const initTheme = localStorage.getItem("theme");
-    return initTheme;
-  });
+function ThemeItem({ data, onActive, active }) {
+  const themeName = data.name;
 
   const handleTheme = () => {
-    setTheme(data.name);
-    document.body.dataset.theme = theme;
-    localStorage.setItem("theme", data.name);
+    document.body.dataset.theme = themeName;
+    localStorage.setItem("theme", themeName);
+    onActive();
   };
 
   return (
     <div className={cx("theme-item")}>
-      <div className={cx("theme-img")} onClick={handleTheme}>
+      <div className={cx("theme-img", { active })} onClick={handleTheme}>
         <img src={data.path} alt="theme" />
+
+        {active && (
+          <div className={cx("check")}>
+            <FontAwesomeIcon icon={faCircleCheck} />
+          </div>
+        )}
       </div>
-      <h4>{data.name}</h4>
+      <h4>{themeName}</h4>
     </div>
   );
 }

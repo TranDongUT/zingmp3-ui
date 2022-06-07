@@ -3,7 +3,6 @@ import classNames from "classnames/bind";
 import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import { useEffect, useState } from "react";
 
 const cx = classNames.bind(style);
 
