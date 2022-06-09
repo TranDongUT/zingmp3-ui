@@ -32,6 +32,7 @@ const Button = forwardRef(
 
     return (
       <Comp className={classes} ref={ref}>
+        {/* icon only vs icon with text */}
         {iconOnly ? (
           <span className={cx("icon")}>{iconOnly}</span>
         ) : (

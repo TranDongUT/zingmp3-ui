@@ -3,27 +3,20 @@ import classNames from "classnames/bind";
 import Header from "./Header";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const cx = classNames.bind(style);
 
 function DefaultLayout({ children }) {
-  useEffect(() => {
-    const rec = document.querySelector(".wrapper");
-    console.log(rec);
-  });
-
   return (
     <div className={cx("wrapper")}>
       <Sidebar />
       {/* body */}
 
-      <div className={cx("container")}>
-        <Header />
-        {/* content */}
-        <div className={cx("content")}>{children}</div>
-      </div>
+      {/* content -- include Header */}
+      <Header />
+      <div className={cx("content")}>{children}</div>
+
       {/* end body */}
       <Footer />
     </div>

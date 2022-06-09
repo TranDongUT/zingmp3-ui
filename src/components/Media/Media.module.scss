@@ -1,0 +1,39 @@
+.wrapper {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+
+.thumbnail {
+  width: 64px;
+  height: 64px;
+  border-radius: 4px;
+}
+
+.infor {
+  color: var(--text-primary-color);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 10px;
+  .singer-name {
+    color: var(--text-secondary-color);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+}
+
+.heart,
+.more {
+  font-size: 1.4rem;
+  padding: 5px;
+  background-color: transparent;
+  color: var(--text-item-hover);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.heart {
+  margin-right: 10px;
+}

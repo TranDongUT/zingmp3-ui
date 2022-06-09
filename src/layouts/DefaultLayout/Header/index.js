@@ -30,7 +30,7 @@ import "tippy.js/dist/tippy.css";
 import Button from "~/components/Button";
 import Search from "../Search";
 import Menu from "~/components/Popper/Menu";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Modal from "~/components/Modal";
 
 const cx = classNames.bind(style);
@@ -109,21 +109,19 @@ function Header() {
     setShowModal(!showModal);
   };
 
-  // handle show header
+  //handle show header
   useEffect(() => {
-    const rec = document.querySelector(".content");
-    console.log(rec);
-    const handleScroll = () => {
+    const fixedHeader = () => {
       setScroll(window.scrollY > 10);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", fixedHeader);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", fixedHeader);
     };
   }, []);
 
   return (
-    <div className={cx("wrapper", { scroll: scroll })}>
+    <div className={cx("wrapper", { fixedHeader: scroll })}>
       <div className={cx("left")}>
         <Button iconOnly={<FontAwesomeIcon icon={faArrowLeftLong} />}></Button>
         <Button iconOnly={<FontAwesomeIcon icon={faArrowRightLong} />}></Button>

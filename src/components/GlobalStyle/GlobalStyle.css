@@ -35,8 +35,8 @@ body {
   text-rendering: optimizespeed;
   color: var(--text-primary-color);
   background-image: var(--bg-img);
-
   background-size: 1920px auto;
+  background-attachment: fixed;
 }
 
 /* Other */
@@ -54,18 +54,20 @@ input {
 
 /* sroll */
 
-body ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 6px;
 }
 
-body ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 0 6px rgb(0 0 0 / 50%);
 }
-body ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   -webkit-box-shadow: inset #fff;
   border-radius: 4px;
 }
+
+
 
 /* themes */
 body[data-theme="Dark"] {
@@ -207,7 +209,7 @@ body[data-theme="Eiffel"] {
   --secondary-color: #282828;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgb(255 255 255 / 10%);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 

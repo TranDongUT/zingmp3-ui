@@ -1,18 +1,13 @@
 .wrapper {
-  background-color: var(--alpha-color);
   height: 100vh;
   position: relative;
-  overflow: hidden;
-}
-
-.container {
-  height: 100%;
 }
 
 .content {
-  width: calc(100% - var(--sidebar-width));
-  height: 100%;
+  background-color: var(--alpha-color);
   margin-top: var(--header-height);
-  float: right;
-  overflow: scroll;
+  width: calc(100% - var(--sidebar-width));
+  padding: 0 var(--default-padding);
+  position: absolute;
+  right: 0;
 }
