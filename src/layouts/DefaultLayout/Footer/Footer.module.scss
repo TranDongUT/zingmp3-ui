@@ -4,7 +4,73 @@
   min-width: 768px;
   padding: 0 20px;
   background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
   position: fixed;
   bottom: 0;
+}
+
+.left {
+  width: 30%;
+}
+// end
+
+// center
+.center {
+  flex: 1;
+}
+
+.player-control {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  font-size: 1.6rem;
+  padding: 3px;
+  margin: 0 10px;
+  background-color: transparent;
+  color: var(--text-primary-color);
+  &:hover {
+    color: var(--text-secondary-color);
+    cursor: pointer;
+  }
+}
+
+.play-btn {
+  font-size: 4rem;
+}
+
+// process bar
+.process {
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range {
+  height: 3px;
+  width: 80%;
+  margin: 0 10px;
+  &:hover {
+    cursor: pointer;
+    height: 5px;
+  }
+}
+
+// end
+// right
+.right {
+  width: 30%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.volume {
+  width: 70px;
+  line-height: 0;
 }
