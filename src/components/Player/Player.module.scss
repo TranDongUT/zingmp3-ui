@@ -1,0 +1,35 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.controler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn {
+  font-size: 4rem;
+}
+
+// process bar
+.process {
+  width: 100%;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range {
+  height: 3px;
+  width: 80%;
+  margin: 0 10px;
+  &:hover {
+    cursor: pointer;
+    height: 5px;
+  }
+}

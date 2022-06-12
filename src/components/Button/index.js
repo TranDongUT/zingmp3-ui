@@ -2,6 +2,7 @@
 import style from "./Button.module.scss";
 import classNames from "classnames/bind";
 import { forwardRef } from "react";
+import { useState } from "react";
 
 const cx = classNames.bind(style);
 
@@ -14,6 +15,9 @@ const Button = forwardRef(
       leftIcon,
       rightIcon,
       children,
+      active,
+      controlType,
+      handleClickFunc,
       className,
       ...props
     },
@@ -26,15 +30,22 @@ const Button = forwardRef(
       circle,
       iconOnly,
       leftIcon,
+      active,
       rightIcon,
       ...props,
     });
 
     return (
-      <Comp className={classes} ref={ref}>
+      <Comp
+        className={classes}
+        ref={ref}
+        onClick={() => handleClickFunc(controlType)}
+      >
         {/* icon only vs icon with text */}
         {iconOnly ? (
-          <span className={cx("icon")}>{iconOnly}</span>
+          <span className={cx("icon", { [className]: className })}>
+            {iconOnly}
+          </span>
         ) : (
           <>
             <span className={cx("icon")}>{leftIcon}</span>

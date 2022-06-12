@@ -4,22 +4,11 @@
   + .wrapper {
     margin-left: 25px;
   }
+  color: var(--text-primary-color);
 }
 
 .icon {
   font-size: 2rem;
-}
-
-.iconOnly {
-  color: var(--text-primary-color);
-
-  &:hover {
-    cursor: pointer;
-    color: var(--white);
-  }
-  + .circle.iconOnly {
-    margin-left: 10px;
-  }
 }
 
 .icon + .title,
@@ -33,19 +22,36 @@
 }
 
 //type
+// circle
 .circle {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   background-color: var(--alpha-color);
-
   .icon {
     color: var(--setting-icon-color);
   }
 
   &:hover {
     cursor: pointer;
-    color: var(--white);
+    color: var(--text-secondary-color);
     filter: brightness(0.9);
   }
+}
+// icon
+.iconOnly {
+  color: var(--text-primary-color);
+
+  &:hover {
+    cursor: pointer;
+    color: var(--text-secondary-color);
+  }
+  + .circle.iconOnly {
+    margin-left: 10px;
+  }
+}
+
+//action
+.active {
+  color: var(--text-item-hover);
 }
