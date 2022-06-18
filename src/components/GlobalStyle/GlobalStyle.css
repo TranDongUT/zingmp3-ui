@@ -52,12 +52,6 @@ input {
   outline: none;
 }
 
-/* Tippy */
-[data-tippy-root] {
-  max-width: calc(100vw - 10px);
-  width: 100%;
-}
-
 /* sroll */
 ::-webkit-scrollbar {
   width: 6px;

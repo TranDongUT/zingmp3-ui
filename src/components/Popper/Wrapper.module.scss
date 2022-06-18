@@ -4,6 +4,8 @@
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+
+  color: var(--text-primary-color);
   background-color: var(--secondary-color);
-  box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 4px 6px 0 rgb(32 33 36 / 28%);
 }

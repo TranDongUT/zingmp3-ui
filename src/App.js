@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DefaultLayout from "./layouts/DefaultLayout";
+import DefaultLayout from "./layouts/DefaultLayout/DefaultLayout";
 import publicRoutes from "./routes";
 import { useEffect, useState } from "react";
 

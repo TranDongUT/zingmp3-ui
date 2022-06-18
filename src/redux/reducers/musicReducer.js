@@ -15,7 +15,6 @@ export const musicReducer = (state = initialState, action) => {
         ...state,
         playlist: action.payload,
       };
-
     case "RANDOM_SONG":
       return {
         ...state,
@@ -76,7 +75,7 @@ export const musicReducer = (state = initialState, action) => {
     case "REPEAT_SONG":
       return {
         ...state,
-        repeat: true,
+        repeat: action.payload,
       };
     default:
       return state;

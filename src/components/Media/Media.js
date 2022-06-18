@@ -6,19 +6,21 @@ import { faEllipsis, faHeart } from "@fortawesome/free-solid-svg-icons";
 import Tippy from "@tippyjs/react";
 import { useState } from "react";
 import { faGratipay } from "@fortawesome/free-brands-svg-icons";
+import { useSelector } from "react-redux";
 
 const cx = classNames.bind(style);
 
 function Media({ data }) {
   const [love, setLove] = useState(false);
 
+  const musicState = useSelector((state) => state.musicReducer);
+  const { playlist, currentSong } = musicState;
+
+  console.log();
+
   return (
     <div className={cx("wrapper")}>
-      <img
-        className={cx("thumbnail")}
-        src="https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_webp/cover/a/c/2/1/ac2198e6f0ed52fae358b62bb84348d2.jpg"
-        alt=""
-      />
+      <img className={cx("thumbnail")} src="" alt="" />
       <div className={cx("infor")}>
         <p>Mộng Tàn Hoa (New Version)</p>
         <p className={cx("singer-name")}>Thien Tu</p>

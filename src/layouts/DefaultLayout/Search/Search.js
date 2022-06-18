@@ -6,10 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass, faX } from "@fortawesome/free-solid-svg-icons";
 import HeadlessTippy from "@tippyjs/react/headless";
 import "tippy.js/dist/tippy.css";
+
+//component
 import SuggestItem from "~/components/SuggestItem";
 import { useRef, useState } from "react";
 
-//component
 const cx = classNames.bind(style);
 
 function Search() {
@@ -23,6 +24,10 @@ function Search() {
     if (!value.startsWith(" ")) {
       setSearchValue(value);
       setShowResult(true);
+    }
+    if (value === "") {
+      setSearchValue("");
+      setShowResult(false);
     }
   };
 
@@ -39,6 +44,8 @@ function Search() {
         onClickOutside={() => setShowResult(false)}
         interactive
         placement="bottom-start"
+        offset={[0, 0]}
+        maxWidth={1}
         render={(attrs) => (
           <div className={cx("search-result")} tabIndex="-1" {...attrs}>
             {/* suggesItem*/}
@@ -51,23 +58,28 @@ function Search() {
         )}
       >
         <div className={cx("search", { showResult })}>
-          <div
+          <button
             className={cx("search-btn")}
             onClick={() => inputRef.current.focus()}
           >
             <FontAwesomeIcon icon={faMagnifyingGlass} />
-          </div>
+          </button>
           <input
             type="text"
             ref={inputRef}
             value={searchValue}
             onChange={(e) => handleInput(e)}
+            onFocus={() => {
+              if (searchValue) {
+                setShowResult(true);
+              }
+            }}
             placeholder="Nhập tên bài hát, nghệ sĩ hoăc MV..."
           />
           {(showResult || searchValue) && (
-            <div className={cx("close-btn")} onClick={handleClear}>
+            <button className={cx("close-btn")} onClick={handleClear}>
               <FontAwesomeIcon icon={faX} />
-            </div>
+            </button>
           )}
         </div>
       </HeadlessTippy>

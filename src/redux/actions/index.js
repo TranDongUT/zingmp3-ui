@@ -29,6 +29,6 @@ export const nextSong = (payload) => ({
 });
 
 export const repeatSong = (payload) => ({
-  type: "PREAT_SONG",
+  type: "REPEAT_SONG",
   payload,
 });

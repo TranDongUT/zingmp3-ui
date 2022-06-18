@@ -54,7 +54,11 @@ function Controler({ data }) {
         break;
       case "REPEAT":
         console.log("REPEAT");
-        dispatch(action.repeatSong());
+        if (musicState.repeat) {
+          dispatch(action.repeatSong(false));
+        } else {
+          dispatch(action.repeatSong(true));
+        }
         break;
       default:
         throw new Error("invalid action Controler");
@@ -63,13 +67,6 @@ function Controler({ data }) {
 
   return (
     <>
-      {/* <Button
-        handleClickFunc={handleClickFunc}
-        className={cx(`${item.className}`)}
-        iconOnly={item.icon}
-        controlType={item.controlType}
-        active={item.active}
-      ></Button> */}
       {/* random */}
       <Button
         active={!!musicState.random}
