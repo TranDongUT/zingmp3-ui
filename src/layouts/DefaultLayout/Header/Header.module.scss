@@ -21,6 +21,7 @@
 
 .left {
   display: flex;
+  flex: 1;
 }
 
 .right {
@@ -32,12 +33,11 @@
 .action-btn {
   width: 40px;
   height: 40px;
-  margin-left: 10px;
   border-radius: 50%;
   background-color: var(--bg-hover-color);
   color: var(--text-primary-color);
   font-size: 2rem;
-
+  margin-left: 10px;
   &:hover {
     cursor: pointer;
     color: var(--text-secondary-color);

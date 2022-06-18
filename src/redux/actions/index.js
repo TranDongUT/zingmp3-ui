@@ -1,3 +1,8 @@
+export const loadPlaylist = (payload) => ({
+  type: "LOAD_PLAYLIST",
+  payload,
+});
+
 export const randomSong = (payload) => ({
   type: "RANDOM_SONG",
   payload,

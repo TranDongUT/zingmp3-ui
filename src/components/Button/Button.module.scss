@@ -11,6 +11,10 @@
   font-size: 2rem;
 }
 
+.icon + .icon {
+  margin-left: 10px;
+}
+
 .icon + .title,
 .title + .icon {
   margin-left: 10px;

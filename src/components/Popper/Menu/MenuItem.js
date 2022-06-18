@@ -7,7 +7,7 @@ import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 
 //component
-import Button from "~/components/Button";
+import Button from "~/components/Button/Button";
 import { WrapperPopper } from "~/components/Popper";
 
 const cx = classNames.bind(style);

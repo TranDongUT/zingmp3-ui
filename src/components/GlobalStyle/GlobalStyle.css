@@ -8,7 +8,7 @@
   /* --text-item-hover:  */
   --secondary-color: #1e1e1e;
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
 
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
@@ -34,7 +34,7 @@ body {
   line-height: 1.5;
   text-rendering: optimizespeed;
   color: var(--text-primary-color);
-  background-image: var(--bg-img);
+  background: var(--bg-img);
   background-size: 1920px auto;
   background-attachment: fixed;
 }
@@ -52,8 +52,13 @@ input {
   outline: none;
 }
 
-/* sroll */
+/* Tippy */
+[data-tippy-root] {
+  max-width: calc(100vw - 10px);
+  width: 100%;
+}
 
+/* sroll */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -67,20 +72,20 @@ input {
   border-radius: 4px;
 }
 
-
-
 /* themes */
 body[data-theme="Dark"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-  --primary-color: #1e1--text-item-hover: e1e;
+  --primary-color: #1e1e1e;
   --secondary-color: #292929;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
+
+  --bg-img: #1e1e1e;
   /* size */
   --header-height: 70px;
   --sidebar-width: 240px;
@@ -91,14 +96,16 @@ body[data-theme="Purple"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-/* --text-item-hover:  */
+  /* --text-item-hover:  */
   --primary-color: #170f23;
   --secondary-color: #432275;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
+
+  --bg-img: #170f23;
   /* size */
   --header-height: 70px;
   --sidebar-width: 240px;
@@ -109,14 +116,16 @@ body[data-theme="Blue Light"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-/* --text-item-hover:  */
+  /* --text-item-hover:  */
   --primary-color: #274a78;
   --secondary-color: #1d375a;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
+
+  --bg-img: #274a78;
   /* size */
   --header-height: 70px;
   --sidebar-width: 240px;
@@ -127,14 +136,16 @@ body[data-theme="Pink"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-/* --text-item-hover:  */
+  /* --text-item-hover:  */
   --primary-color: #800064;
   --secondary-color: #a22687;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
+
+  --bg-img: #800064;
   /* size */
   --header-height: 70px;
   --sidebar-width: 240px;
@@ -145,14 +156,16 @@ body[data-theme="Green"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-/* --text-item-hover:  */
+  /* --text-item-hover:  */
   --primary-color: #124534;
   --secondary-color: #126e54;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
+
+  --bg-img: #124534;
   /* size */
   --header-height: 70px;
   --sidebar-width: 240px;
@@ -163,12 +176,12 @@ body[data-theme="XoneFM"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-/* --text-item-hover:  */
+  /* --text-item-hover:  */
   --primary-color: #1e1e1e;
   --secondary-color: #282828;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
@@ -183,12 +196,12 @@ body[data-theme="Zing"] {
   /* color */
   --text-primary-color: #d8d8d8;
   --text-secondary-color: #ffffff80;
-/* --text-item-hover:  */
+  /* --text-item-hover:  */
   --primary-color: #37075d;
   --secondary-color: #6a39af;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
@@ -231,7 +244,7 @@ body[data-theme="Lisa"] {
   --secondary-color: #fff8f8;
 
   --bg-hover-color: rgba(0, 0, 0, 0.05);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
@@ -252,8 +265,8 @@ body[data-theme="Jennie"] {
   --primary-color: #e5e3df;
   --secondary-color: #e2e7f5;
 
-  --bg-hover-color: rgba(0,0,0,0.05);
-  --alpha-color: rgba(0,0,0,0.05);
+  --bg-hover-color: rgba(0, 0, 0, 0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
@@ -268,14 +281,14 @@ body[data-theme="Jennie"] {
 body[data-theme="Jisoo"] {
   /* color */
   --text-primary-color: #32323d;
-  --text-secondary-color: rgba(0,0,0,0.6);
+  --text-secondary-color: rgba(0, 0, 0, 0.6);
   --text-item-hover: #6b3483;
 
   --primary-color: #fff;
   --secondary-color: #fff;
 
   --bg-hover-color: rgb(0 0 0 / 5%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 
@@ -297,7 +310,7 @@ body[data-theme="Rose"] {
   --secondary-color: #192f60;
 
   --bg-hover-color: rgb(255 255 255 / 10%);
-  --alpha-color: rgba(0,0,0,0.05);
+  --alpha-color: rgba(0, 0, 0, 0.05);
   --sidebar-bg: rgb(255 255 255 / 30%);
   --white: #fff;
 

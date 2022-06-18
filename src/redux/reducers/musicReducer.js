@@ -8,24 +8,32 @@ export const initialState = {
 };
 
 export const musicReducer = (state = initialState, action) => {
-  console.log("ok");
-
+  console.log(state);
   switch (action.type) {
-    case "RANDOM_SONG":
-      let random = Math.ceil(Math.random() * state.playlist.length);
+    case "LOAD_PLAYLIST":
       return {
         ...state,
-        random: true,
+        playlist: action.payload,
+      };
+
+    case "RANDOM_SONG":
+      return {
+        ...state,
+        random: action.payload,
       };
     case "PREV_SONG":
       if (state.random) {
+        let newRandom = Math.floor(Math.random() * state.playlist.length);
+        while (newRandom == state.currentSong) {
+          newRandom = Math.floor(Math.random() * state.playlist.length);
+        }
         return {
           ...state,
           // eslint-disable-next-line eqeqeq
-          currentSong: random,
+          currentSong: newRandom,
         };
       } else {
-        let current = state.playingSong;
+        let current = state.currentSong;
         return {
           ...state,
           //first music in playlist
@@ -43,15 +51,21 @@ export const musicReducer = (state = initialState, action) => {
         ...state,
         playing: false,
       };
+
     case "NEXT_SONG":
       if (state.random) {
+        let newRandom = Math.floor(Math.random() * state.playlist.length);
+        while (newRandom == state.currentSong) {
+          newRandom = Math.floor(Math.random() * state.playlist.length);
+        }
         return {
           ...state,
           // eslint-disable-next-line eqeqeq
-          currentSong: random,
+          currentSong: newRandom,
         };
       } else {
-        let current = state.playingSong;
+        let current = state.currentSong;
+
         return {
           ...state,
           //last music in playlist
